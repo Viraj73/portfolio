@@ -55,10 +55,10 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 .nav { display: flex; align-items: center; gap: 1.2rem; }
 .nav a { color: var(--text); text-decoration: none; }
 .nav a:hover { color: var(--accent); }
-.menu-btn { display: none; }                      /* hidden on desktop */
+
 
 /* Shared look for the buttons */
-.theme-btn, .menu-btn {
+.theme-btn {
   background: none; color: var(--text); cursor: pointer;
   border: 1px solid var(--muted); border-radius: 6px; padding: 0.3rem 0.8rem;
   font: inherit;
@@ -111,7 +111,7 @@ footer { text-align: center; color: var(--muted); padding: 2rem 1.5rem; }
 /* ===== 9. PHONES: screens narrower than 700px ===== */
 @media (max-width: 700px) {
   .hero { grid-template-columns: 1fr; min-height: auto; }  /* stack into one column */
-  .menu-btn { display: block; }                            /* show the Menu button */
+
   .nav {
     display: none;                                         /* menu hidden until opened */
     position: absolute; top: 100%; left: 0; right: 0;
