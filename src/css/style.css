@@ -28,7 +28,13 @@ body {
   line-height: 1.6;
   background: var(--bg);
   color: var(--text);
+  transition: background 0.25s ease, color 0.25s ease;
 }
+
+.query-card, .project, .chips li {
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
 a { color: var(--accent); }
 h1, h2, h3 { line-height: 1.2; margin: 0 0 0.5rem; }
 h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
