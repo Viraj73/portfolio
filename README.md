@@ -21,7 +21,6 @@ portfolio/
 │   │   └── style.css       # Custom styles & design tokens
 │   ├── js/
 │   │   └── script.js       # Theme toggle & DOM utilities
-│   ├── img/                # Project assets
 │   └── index.html          # Semantic page structure
 ├── .gitignore              # IDE and build cache exclusions
 └── README.md               # Project documentation
