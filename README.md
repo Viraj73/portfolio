@@ -14,7 +14,7 @@ A personal portfolio built using semantic HTML5, CSS3, and vanilla JavaScript fo
 
 ## Repository Structure
 
-
+```text
 portfolio/
 ├── src/
 │   ├── css/
@@ -25,10 +25,10 @@ portfolio/
 │   └── index.html          # Semantic page structure
 ├── .gitignore              # IDE and build cache exclusions
 └── README.md               # Project documentation
-
+```
 ---
 
-## 🌟 Highlights
+## Highlights
 
 - Dynamic Dark/Light Theme: Built using CSS custom variables with instant switching.
 - Responsive Layout: Adaptive design powered by CSS Grid and Flexbox for various screen widths.
@@ -36,7 +36,7 @@ portfolio/
 
 ---
 
-## 👤 Author
+## Author
 
 Viraj Mittal  
 B.Tech, Information Technology (Network and Information Security)  
