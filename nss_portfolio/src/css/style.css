@@ -1,0 +1,125 @@
+/* ===== 1. COLOURS (variables) =====
+   Change a colour here and it changes everywhere on the site. */
+:root {
+  --bg: #14202e;        /* page background */
+  --surface: #1d2d40;   /* cards */
+  --text: #e8eef5;      /* main text */
+  --muted: #9db0c5;     /* secondary text */
+  --accent: #f2b84b;    /* buttons, links, highlights */
+  --on-accent: #14202e; /* text written on top of the accent colour */
+}
+
+/* Light theme: the JS switches data-theme on <html> to "light" */
+:root[data-theme="light"] {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --text: #14202e;
+  --muted: #53657a;
+  --accent: #a85f00;
+  --on-accent: #ffffff;
+}
+
+/* ===== 2. BASE STYLES ===== */
+* { box-sizing: border-box; }               /* padding no longer makes boxes wider */
+html { scroll-behavior: smooth; }           /* smooth scrolling when clicking nav links */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+a { color: var(--accent); }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 0.5rem; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); } /* grows with screen width, within limits */
+h2 { font-size: 1.8rem; margin-bottom: 1rem; }
+h3 { font-size: 1.1rem; }
+p { max-width: 65ch; }                      /* keeps lines easy to read */
+.meta { color: var(--muted); margin: 0 0 0.5rem; }
+
+/* Each section is centred, with a max width and space around it */
+section, footer { max-width: 1000px; margin: 0 auto; padding: 4rem 1.5rem; }
+
+/* Keyboard focus outline so tabbing is visible */
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* ===== 3. HEADER ===== */
+.site-header {
+  position: sticky; top: 0; z-index: 10;          /* stays at the top while scrolling */
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.8rem 1.5rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--surface);
+}
+.logo { font-weight: 700; color: var(--text); text-decoration: none; }
+.nav { display: flex; align-items: center; gap: 1.2rem; }
+.nav a { color: var(--text); text-decoration: none; }
+.nav a:hover { color: var(--accent); }
+.menu-btn { display: none; }                      /* hidden on desktop */
+
+/* Shared look for the buttons */
+.theme-btn, .menu-btn {
+  background: none; color: var(--text); cursor: pointer;
+  border: 1px solid var(--muted); border-radius: 6px; padding: 0.3rem 0.8rem;
+  font: inherit;
+}
+
+/* ===== 4. HERO ===== */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;                 /* two columns: text and query card */
+  gap: 2rem; align-items: center;
+  min-height: 80vh;
+}
+.lead { font-size: 1.15rem; color: var(--muted); }
+.btn {
+  display: inline-block; margin: 0.5rem 0.5rem 0 0; padding: 0.7rem 1.3rem;
+  background: var(--accent); color: var(--on-accent);
+  border-radius: 6px; text-decoration: none; font-weight: 600;
+}
+.btn-outline { background: none; color: var(--accent); border: 2px solid var(--accent); }
+
+/* The SQL card */
+.query-card {
+  background: var(--surface); border-radius: 12px; padding: 1.2rem;
+  font-family: Consolas, "Courier New", monospace; overflow-x: auto;
+}
+.query-card pre { margin: 0 0 1rem; color: var(--accent); }
+.query-card table { width: 100%; border-collapse: collapse; }
+.query-card th, .query-card td {
+  text-align: left; padding: 0.4rem 0.6rem; border: 1px solid var(--muted); font-size: 0.9rem;
+}
+
+/* ===== 5. EDUCATION, ACHIEVEMENTS ===== */
+.item { border-left: 3px solid var(--accent); padding-left: 1rem; margin-bottom: 1.5rem; }
+
+/* ===== 6. SKILLS ===== */
+.skill-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+.chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chips li { background: var(--surface); padding: 0.3rem 0.8rem; border-radius: 999px; font-size: 0.9rem; }
+
+/* ===== 7. PROJECTS ===== */
+.project-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.project { background: var(--surface); padding: 1.5rem; border-radius: 12px; }
+.tags { color: var(--muted); font-size: 0.9rem; }
+
+/* ===== 8. CONTACT AND FOOTER ===== */
+.links { list-style: none; padding: 0; }
+.links li { margin-bottom: 0.4rem; }
+footer { text-align: center; color: var(--muted); padding: 2rem 1.5rem; }
+
+/* ===== 9. PHONES: screens narrower than 700px ===== */
+@media (max-width: 700px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }  /* stack into one column */
+  .menu-btn { display: block; }                            /* show the Menu button */
+  .nav {
+    display: none;                                         /* menu hidden until opened */
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: flex-start;
+    background: var(--bg); padding: 1rem 1.5rem;
+  }
+  .nav.open { display: flex; }                             /* JS adds "open" on click */
+}
+
+/* Respect people who turn off animations in their system settings */
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
