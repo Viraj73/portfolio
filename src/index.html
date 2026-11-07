@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <title>Viraj Mittal | BTech Student at NSUT</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio of Viraj Mittal, ITNS undergraduate at NSUT Delhi." />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+
+    <header class="site-header">
+      <a class="logo" href="#home">Viraj Mittal</a>
+
+      <button id="menu-btn" class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+
+      <nav id="nav" class="nav">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-btn" class="theme-btn">Light mode</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-text">
+          <h1>Hi, I’m Viraj Mittal.</h1>
+          <p class="lead">
+            I’m an Information Technology undergraduate at NSUT, Delhi. I enjoy working with
+            databases, Python and Java.
+          </p>
+          <a class="btn" href="#projects">See my projects</a>
+          <a class="btn btn-outline" href="#contact">Contact me</a>
+        </div>
+
+        <div class="query-card" aria-label="A SQL query describing Viraj">
+          <pre><code>SELECT name, college, skills
+FROM students
+WHERE name = 'Viraj';</code></pre>
+          <table>
+            <tr><th>name</th><th>college</th><th>skills</th></tr>
+            <tr><td>Viraj</td><td>NSUT</td><td>SQL, Python, Java</td></tr>
+          </table>
+        </div>
+      </section>
+      7
+      <section id="about">
+        <h2>About me</h2>
+        <!-- TODO: rewrite these lines in your own words -->
+        <p>
+          I’m studying B.Tech in Information Technology at Netaji Subhas University of Technology,
+          Delhi. I like turning small ideas into working programs, and I’m learning web
+          development to show my work online.
+        </p>
+        <p>
+          I’m looking for internships and projects where I can learn from a team and build
+          something useful.
+        </p>
+      </section>
+
+      <!-- ========== EDUCATION ========== -->
+      <section id="education">
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="item">
+            <h3>Netaji Subhas University of Technology (NSUT), Delhi</h3>
+            <p class="meta">B.Tech, Information Technology, started August 2026</p>
+          </div>
+          <div class="item">
+            <h3>Kendriya Vidyalaya</h3>
+            <p class="meta">High school. JEE Main: 98.2 percentile</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SKILLS ========== -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-groups">
+          <div>
+            <h3>Languages</h3>
+            <ul class="chips"><li>Python</li><li>Java</li><li>SQL</li></ul>
+          </div>
+          <div>
+            <h3>Databases</h3>
+            <ul class="chips"><li>MySQL</li><li>DBMS concepts</li></ul>
+          </div>
+          <div>
+            <h3>Web</h3>
+            <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript (learning)</li></ul>
+          </div>
+          <div>
+            <h3>Tools and concepts</h3>
+            <ul class="chips"><li>Git and GitHub</li><li>PyCharm</li><li>Object-oriented programming</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== PROJECTS ========== -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+          <article class="project">
+            <h3>Student Database Management System</h3>
+            <p class="meta">Sep to Oct 2024, built with Amandeep</p>
+            <p>
+              A system to store and manage student records using Python and SQL.
+              <!-- TODO: add what it can do, e.g. add, search, update, delete records -->
+            </p>
+            <p class="tags">Python, SQL</p>
+            <!-- TODO: replace # with your GitHub repo link -->
+            <a href="#">View on GitHub</a>
+          </article>
+
+          <article class="project">
+            <h3>Python Calculator with Unit Converters</h3>
+            <p class="meta">Built with a teammate</p>
+            <p>
+              A calculator with many built-in converters that change a value from one unit to
+              another.
+              <!-- TODO: name a few converters, e.g. length, temperature, weight -->
+            </p>
+            <p class="tags">Python</p>
+            <a href="#">View on GitHub</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== ACHIEVEMENTS ========== -->
+      <section id="achievements">
+        <h2>Achievements</h2>
+        <div class="item">
+          <h3>Build With Bharat 2.0, national-level hackathon</h3>
+          <p class="meta">NIT Delhi, 13 to 14 September 2026, team “Tech in Play”</p>
+        </div>
+      </section>
+
+      <!-- ========== CONTACT ========== -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Want to work together or just say hello? Reach me here.</p>
+        <ul class="links">
+          <!-- TODO: put your real email and GitHub below -->
+          <li><a href="mailto:virajmittal73@gmail.com">virajmittal73@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/viraj-mittal-4b1bab229/">LinkedIn</a></li>
+          <li><a href="https://github.com/your-username">GitHub</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <!-- JS fills in the current year inside the span -->
+      <p>© <span id="year"></span> Viraj Mittal</p>
+    </footer>
+
+    <!-- Script goes at the bottom so the page loads first, then JS runs -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
